@@ -12,7 +12,7 @@ const Automation: NextPage = () => {
   const [headers, setHeaders] = useState<HeadersInit>();
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState<string>();
 
   useEffect(() => {
     getMessages();
@@ -61,7 +61,7 @@ const Automation: NextPage = () => {
         setMessages(await res.json());
         setLoading(false);
       }
-    } catch (e) {
+    } catch (e: any) {
       if (e.status === 401) {
         Router.push("/");
       } else {

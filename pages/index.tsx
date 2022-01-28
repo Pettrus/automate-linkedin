@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
   const renderModal = () => (
     <Modal title="What is the li_at token?" close={() => setShowModal(false)}>
-      Parada
+      Placeholder
     </Modal>
   );
 
