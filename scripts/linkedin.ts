@@ -4,7 +4,7 @@ import puppeteer from "puppeteer";
 
 const login = async (token: string) => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ["--no-sandbox", `--window-size=1366,768`],
   });
 
